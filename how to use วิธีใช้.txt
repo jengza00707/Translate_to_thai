@@ -1,0 +1,108 @@
+----------------------------------------วิธีใช้งานโดยสังเขป-----------------------------
+.
+1.หลังจากเราแตกไฟล์.xnb แล้วคุณอาจจะได้เป็นไฟล์ .yaml หรือ .jsonมา
+2.ถ้าไฟล์จากข้อที่ 1. มีภาษาไทย ให้ลากลงไปในโฟลเดอร์ src_thai และข้ามข้อที่ 3. ได้เลย
+3.ถ้าไฟล์จากข้อที่ 1. มีภาษาเอเลี่ยน (ÍԒāºĉ¹ʱÍ¹ä˴ġéÂ ประมาณนี้) ให้ลากลงไปในโฟลเดอร์ src_unicode
+4.เปิดไฟล์ translate.bat
+5.เลือกตัวเลือก โดยการพิมพ์ตัวเลขแล้วกดEnter 1 ที
+.
+-เลข 1 แปลภาษาเอเลี่ยน ไปเป็น ภาษาไทย (ของไฟล์ประเภท .json)
+-เลข 2 แปลภาษาเอเลี่ยน ไปเป็น ภาษาไทย (ของไฟล์ประเภท .yaml)
+.
+-เลข 3 แปลไทย ไปเป็น ภาษาเอเลี่ยน (ของไฟล์ประเภท .json)
+-เลข 4 แปลไทย ไปเป็น ภาษาเอเลี่ยน (ของไฟล์ประเภท .yaml)
+.
+-เลข 0 ออก
+-เลข 6940 เครดิต แน่นอนว่าขอขอบคุณ BlackChickCommunity ด้วย
+.
+.
+.
+!!ข้อควรรู้!!
+-เข้าไปอ่านโค๊ดในโฟลเดอร์ z_python ได้ตามสบาย
+-ถ้าไฟล์ใน src_thai และ src_unicode เป็นชื่อเดียวกัน เวลาแปลแล้ว มันจะทับกัน
+-ไฟล์ใน src_thai พอแปลแล้วจะไปโผล่ใน dst_unicode
+-ไฟล์ใน src_unicode พอแปลแล้วจะไปโผล่ใน dst_thai
+-อย่าเปลี่ยนชื่อโฟลเดอร์ เว้นแต่คุณรู้ตัวว่ากำลังทำอะไรอยู่
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+!!ข้ออธิบาย!!
+-ในส่วนนี้จะไม่อ่านก็ได้ เพราะไม่ส่งผลต่อการใช้งาน แต่ถ้าคุณอยากเข้าใจว่าทำไม
+-พออ่านแล้วคุณอาจจะเข้าใจ หรืองงมากๆ
+.
+---------------------"ม็อดแปลไทยในเกมนี้ ต้องเป็นภาษาเอเลี่ยนด้วย?"-----------------------
+.
+เหตุผลว่าทำไมนั้นคงจะต้องอธิบายกันยาวหน่อย
+อย่างแรกเลยคือ เกมจริงๆมันไม่มีภาษาไทยมาให้ นั่นเป็นเหตุผลว่าทำไมถงมีม็อดแปลไทยมาให้เอง ซึ่งก็เป็นเรื่องปกติที่คนน่าจะคิดกันได้อยู่แล้ว
+"แล้วถ้าเกมมันไม่มีภาษาไทยมาให้ แล้วเราเอาตัวอักษรภาษาไทยมาได้ไง? นึกว่าม็อดแปลไทยแค่เปลี่ยนข้อความในเกมเฉยๆซะอีก"
+การที่เรามีตัวอักษรไทยในเกม (ในที่นี้คือ Stardew Valley)ได้นั้นก็เพราะว่าเราไปเปลี่ยนรูปภาพที่แสดงตัวอักษรนั้นนั่นเองครับ
+พูดง่ายๆก็คือ ไปแทนที่ตัวอักษรในเกมให้ไปเป็นภาษาไทยนั่นแหละ 
+ซึงต้องบอกอีกว่าตัวอักษรที่เราอ่านกันในเกมมันมี 2 องค์ประกอบครับ (1) คือ ตัวอักษรที่เกมเข้าใจว่ามันคือตัวอักษรนี้ (2) สแดงสัญลักษ์ที่แทนตัวอักษรนั้นออกมา
+ถ้าฟังคุ้นๆมันก็คือ Font ของเกมนั่นเองครับ สมมติผมทำFont ขึ้นมา แล้วเปลี่ยนสัญลักษ์แทนตัวFเป็นรูปแอปเปิ้ล เวลาเกมอ่านเจอตัวอักษรF มันก็จะแสดงผลเป็นรูปแอปเปิ้ลขึ้นมาแทน
+"ก็คือเปลี่ยนFontตัวอักษรภาษาอังกฤษในเกมให้ขึ้นรูปเป็นภาษาไทยใช่มั๊ย?"
+ถูกต้องครับ แต่ถูกไม่หมด มันไม่ได้แทนตัวอักษรภาษาอังกฤษได้ เนื่องจาก เกมยังต้องการภาษาอังกฤษอยู่ และตัวอักษรมีน้อยเกินไป
+จึงหันไปใช้ตัวอักษรที่ไม่ได้ใช้ครับ เช่น ¡ = ก , ¢ = ข เป็นต้น
+เวลาเราพิมพ์ภาษาไทยแล้วไปแปลเป็นภาษาที่ม็อดแปลไทยใช้มันจึงเป็นภาษาเอเลี่ยนแบบนั้นครับ
+!!!ปล. ผู้เขียนไม่ได้เป็นผู้เชี่ยวชาญการทำม็อดแปลภาษาไทยแต่อย่างใด และความรู้ที่เอามาเขียนมีถึงวันที่ 25/12/2022 เท่านั้น
+
+-- en
+----------------------------------------How to use briefly----- ------------------------
+.
+1. After we extract the file.xnb Then you might get a .yaml or .json file.
+2. If the file from item 1. has Thai language, drag it into the src_thai folder and skip item 3.
+3. If the file from item 1. has an alien language (ÍԒāºĉ¹ʱÍ¹ä˴ġéÂ like this) drag it into the src_unicode folder.
+4. Open translate.bat file
+5. Choose an option. By typing the number and press Enter 1 time.
+.
+-Number 1 translates alien language to Thai (of file type .json)
+-Number 2 translates alien language into Thai (of file type .yaml)
+.
+-Number 3 translate Thai to alien language (of file type .json)
+-Number 4 translate Thai to alien language (of file type .yaml)
+.
+-Number 0 exited
+-Number 6940 Credits, of course, thank you. BlackChickCommunity too
+.
+.
+.
+!!What you should know!!
+- You can go read the code in the z_python folder comfortably.
+-If the files in src_thai and src_unicode have the same name, when translated, they will overlap.
+- Files in src_thai, after translated, will appear in dst_unicode.
+-File in src_unicode, after translated it will appear in dst_thai
+- Do not change the folder name. unless you know what you are doing
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+!!Description!!
+- In this section, you can not read. because it does not affect the use But if you want to understand why
+- After reading, you may understand or be very confused.
+.
+---------------------"Thai translation mods in this game Must it be in an alien language?" -----------------------
+.
+The reason why would have to explain at length.
+First of all The game actually doesn't have Thai language. That's why there is a Thai translation mod for you. Which is normal for people to think about each other already.
+"What if the game doesn't have Thai language? And how do we get Thai characters? I thought the Thai translation mod just changed the in-game text."
+The fact that we can have Thai characters in the game (in this case Stardew Valley) is because we change the image that shows that character.
+Simply put, to replace the characters in the game to Thai language
+Which must be said that the letters that we read in the game have 2 elements: (1) is the letter that the game understands that it is this letter (2) shows the symbol that represents that letter
+If it sounds familiar, it's the font of the game itself. Let's say I made a Font and changed the symbol instead of the F to an apple. When the game reads the letter F It will display an apple instead.
+"It is to change the font of the English characters in the game to form Thai, right?"
+That's right, but it's not all right. It doesn't replace English characters because the game still needs English. and the characters are too few
+So turn to use letters that are not used, such as ¡ = A , ¢ = B etc.
+When we type Thai and translate it into the language used by the Thai translation mod, it's an alien language like that.
+!!!PS. The author is not an expert in making Thai translation mods in any way. And the knowledge that I took to write is only until 25/12/2022
